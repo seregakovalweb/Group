@@ -1,0 +1,62 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+html, body {
+  height: 100%;
+  min-height: 100%;
+}
+body {
+  font-family: 'Open Sans', sans-serif;
+  line-height: 50px;
+}
+
+.backgorund {
+  width: 200px;
+  height: 200px;
+  background-image: url('http://komotoz.ru/photo/priroda/photos/pejzazhy_prirody/pejzazhy_prirody_01.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.header {
+  padding: 15px;
+  background: rgb(66, 131, 251);
+  margin-bottom: 15px;
+}
+
+.header .logo {
+  color: #fff;
+  font-size: 20px;
+  display: block;
+  float: left;
+  margin-left: 10px;
+  text-decoration: none;
+}
+
+.header .logo2 {
+  color: #fff;
+  font-size: 20px;
+  display: block;
+  margin-left: 10px;
+  text-decoration: none;
+}
+
+.header .nav {
+  float: right;
+}
+
+.clearfix:after {
+  content: '';
+  display: block;
+  clear: both;
+}
+
+.logoImg {
+  width: 150px;
+}
+
+.leftCol {
+  float: left;
+}
