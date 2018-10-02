@@ -341,3 +341,20 @@ body {
   transform: translateY(-50%) rotate(45deg);
   left: -5px;
 }
+
+/*----flex-box style-----*/
+
+.flex {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.flex .flex-item {
+  background: #6464da;
+  width: 100px;
+  height: 100px;
+  color: #fff;
+  margin: 10px;
+  display: flex;
+  justify-content: center;
+}
