@@ -101,9 +101,59 @@ body {
   color: #fff;
   text-decoration: none;
   display: block;
+  font-size: 16px;
   margin-right: 15px;
+  padding: 10px 15px;
+  border-radius: 3px;
+  transition: all 0.3s;
 }
 
 .header .nav a:last-child {
-  
+  margin-right: 0;
+}
+
+.header .nav a:hover {
+  background-color: #fff;
+  color: #005fc2d1;
+}
+
+.wrapper {
+  margin: 0 auto;
+  padding: 0 15px;
+  max-width: 1170px;
+}
+
+.wrap-post {
+  padding: 10px;
+  display: flex;
+  background-color: #d6d5d5;
+}
+
+.wrap-post .head {
+  display: flex;
+  align-items: center;
+  padding: 10px 15px;
+  background-color: #eaeaea;
+}
+
+.wrap-post .head .title {
+  font-size: 22px;
+  color: #4b4040;
+  flex: 1;
+  margin-right: 15px;
+}
+
+.wrap-post .post {
+  flex: 2;
+  margin-right: 15px;
+}
+
+.wrap-post .aside {
+  flex: 1;
+  padding: 15px;
+  background-color: #005fc2d1;
+}
+
+.wrap-post .body {
+  display: flex;
 }
