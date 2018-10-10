@@ -259,15 +259,18 @@ body {
 
 .section-team .box-img {
 	height: 300px;
+	position: relative;
 }
 
-.section-team .box-img img {
+.section-team .box-img .avatar {
 	height: 100%;
+	width: 100%;
 	object-fit: cover;
 }
 
 .section-team .boxes {
 	display: flex;
+	flex-wrap: wrap;
 	margin: 0 -15px;
 }
 
@@ -276,9 +279,40 @@ body {
 	margin: 0 15px;
 }
 
+.section-team .hideBlock {
+	position: absolute;
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: 100%;
+	transition: 0.3s;
+	background-color: rgba(255,255,255,0.3);
+	z-index: 1;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	visibility: hidden;
+	opacity: 0;
+}
+
+.section-team .hideBlock .social {
+	display: flex;
+}
+
+.section-team .hideBlock .social .social-item {
+	width: 50px;
+	height: 50px;
+	background-color: #3a454d;
+	display: flex;
+	align-items: center;
+	margin: 0 2px;
+	justify-content: center;
+}
+
 .section-team .box-info {
 	height: 75px;
 	padding: 0 15px;
+	transition: 0.3s;
 	justify-content: center;
 	display: flex;
 	flex-direction: column;
@@ -294,4 +328,62 @@ body {
 .section-team .box .position {
 	color: #8d8f92;
 	font-size: 14px;
+}
+
+@keyframes anim {
+	from {
+		margin-top: -20px;
+	}
+	to {
+		margin-top: 0px;
+	}
+}
+
+.section-team .boxes .box:hover .hideBlock {
+	visibility: visible;
+	opacity: 1;
+}
+
+.section-team .boxes .box:hover .social{
+	animation: anim 0.3s forwards;
+}
+
+.section-team .boxes .box:hover .box-info{
+	background-color: #3a454d;
+}
+
+.section-team .boxes .box:hover .name {
+	color: #fff;
+}
+.section-team .boxes .box:hover .position {
+	color: #fff;
+}
+
+
+@media (max-width: 1100px) {
+	.section-team .boxes {
+		margin: 0;
+		justify-content: center;
+	}
+	.section-team .boxes .box {
+		width: calc(50% - 30px);
+		max-width: 350px;
+		margin-bottom: 25px;
+	}
+	.section-modest .row {
+		flex-wrap: wrap;
+		flex-direction: column;
+	}
+	.section-modest .col {
+		margin-bottom: 20px;
+	}
+	.section-modest .col:last-child {
+		margin-left: 0;
+	}
+}
+
+@media (max-width: 480px) {
+	.section-team .boxes .box {
+		width: 100%;
+	}
 }
