@@ -55,6 +55,10 @@ img {
   max-width: 100%;
 }
 
+button {
+	cursor: pointer;
+}
+
 body {
 	font-family: 'Open Sans', sans-serif;
 }
@@ -69,6 +73,15 @@ body {
 	width: 100%;
 	max-width: 1160px;
 	margin: 0 auto;
+}
+
+.section-title {
+	padding-left: 10px;
+	font-size: 36px;
+	color: #292f36;
+	margin-bottom: 50px;
+	text-transform: uppercase;
+	border-left: 10px solid #e1e6ea; 
 }
 
 .header .wrapper {
@@ -151,4 +164,134 @@ body {
 .banner .button:hover {
 	border-color: #23b7a4;
 	background-color: #23b7a4;
+}
+
+.section-modest {
+	padding: 70px 0;
+	border-bottom: 1px solid #dde1e4;
+}
+.section-modest .row {
+	display: flex;
+}
+
+.section-modest .col {
+	flex: 1;
+}
+
+.section-modest .col:last-child {
+	margin-left: 30px;
+}
+
+.section-modest .text {
+	margin-bottom: 30px;
+	font-size: 16px;
+	color: #8d8f92;
+	line-height: 24px;
+}
+
+.section-modest .text:last-child {
+	margin-bottom: 50px;
+}
+
+.section-modest .item {
+	display: flex;
+	margin-bottom: 30px;
+}
+.section-modest .item:last-child {
+	margin-bottom: 0;
+}
+
+.section-modest .item-content {
+	flex: 1;
+}
+
+.section-modest .item_number {
+	width: 50px;
+	height: 50px;
+	display: flex;
+	background-color: #23b7a4;
+	align-items: center;
+	justify-content: center;
+	margin-right: 20px;
+}
+
+.section-modest .number-text {
+	font-size: 20px;
+	color: #fff;
+}
+
+.section-modest .item-title {
+	font-size: 18px;
+	color: #292f36;
+	text-transform: uppercase;
+	margin-bottom: 10px;
+}
+
+.section-modest .item-text {
+	font-size: 16px;
+	color: #8d8f92;
+	line-height: 24px;
+}
+
+.section-modest .social {
+	display: flex;
+}
+
+.section-modest .social-btn {
+	width: 55px;
+	transition: 0.3s;
+	background-color: #c8cdd0;
+	height: 55px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	margin-right: 3px;
+}
+
+.section-modest .social-btn:last-child {
+	margin-right: 0;
+}
+
+
+.section-team {
+	padding: 70px 0;
+}
+
+.section-team .box-img {
+	height: 300px;
+}
+
+.section-team .box-img img {
+	height: 100%;
+	object-fit: cover;
+}
+
+.section-team .boxes {
+	display: flex;
+	margin: 0 -15px;
+}
+
+.section-team .boxes .box {
+	width: 260px;
+	margin: 0 15px;
+}
+
+.section-team .box-info {
+	height: 75px;
+	padding: 0 15px;
+	justify-content: center;
+	display: flex;
+	flex-direction: column;
+	background-color: #e1e6ea;
+}
+.section-team .box .name {
+	margin-bottom: 10px;
+	font-size: 16px;
+	color: #292f36;
+	text-transform: uppercase;
+}
+
+.section-team .box .position {
+	color: #8d8f92;
+	font-size: 14px;
 }
