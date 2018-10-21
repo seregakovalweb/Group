@@ -1,0 +1,40 @@
+.header {
+  padding: 25px 15px;
+  background-color: #1d2126;
+  .wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .nav {
+    display: flex;
+    a {
+      color: #a4aead;
+      font-size: 14px;
+      display: block;
+      padding: 7px 10px;
+      transition: all 0.3s;
+      border-radius: 3px;
+      text-transform: uppercase;
+      text-decoration: none;
+      margin-left: 3px;
+      border: 1px solid transparent;
+      &:hover {
+        border-color: #a4aead;
+      }
+      &.active {
+        border-color: #23b7a4;
+        color: #23b7a4;
+      }
+    }
+  }
+  @media (max-width: 480px) {
+    .wrapper {
+      padding: 0;
+		  flex-direction: column;
+    }
+    .logo {
+      margin-bottom: 15px;
+    }
+  }
+}

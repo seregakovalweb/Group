@@ -376,7 +376,8 @@ body {
 }
 
 .section-work .boxes .box {
-	width: 360px;
+	max-width: 360px;
+	width: calc(33.3% - 30px);
 	position: relative;
 	margin: 0 15px 25px 15px;
 }
@@ -450,6 +451,9 @@ body {
 	.section-team {
 		padding: 30px 0;
 	}
+	.section-work .boxes .box {
+		width: calc(50% - 30px);
+	}
 }
 
 @media (max-width: 480px) {
@@ -492,4 +496,11 @@ body {
 	.banner {
 		padding: 20px 0;
 	}
+	.section-work .boxes .box {
+		width: calc(100% - 30px);
+	}
+}
+
+.banner .button {
+
 }
