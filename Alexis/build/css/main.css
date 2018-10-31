@@ -63,39 +63,126 @@ body {
   display: flex; }
 
 /*---MODULES---*/
-.banner {
+.firstSection {
+  position: relative;
+  min-height: 700px;
+  padding: 40px 15px;
+  background: url("../../img/slider-background.jpg") no-repeat center center;
+  background-size: cover;
   display: flex;
   align-items: center;
-  height: 650px;
-  background: url("./images/banner.jpg") no-repeat center center;
-  background-size: cover; }
-  .banner .title {
+  justify-content: center; }
+  .firstSection:after {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    content: '';
+    background: rgba(18, 38, 76, 0.4); }
+  .firstSection .wrapper {
+    max-width: 830px;
+    margin: 0 auto;
+    position: relative;
+    z-index: 1; }
+  .firstSection__wrapBtn {
+    text-align: center;
+    margin-bottom: 80px; }
+  .firstSection__title {
+    font-size: 60px;
     color: #fff;
-    font-size: 36px;
-    text-transform: uppercase;
-    margin-bottom: 30px; }
-  .banner .text {
-    line-height: 25px;
-    color: #ccd0d7;
-    font-size: 16px;
-    margin-bottom: 40px; }
-  .banner .buttons {
+    text-align: center;
+    margin-bottom: 60px;
+    line-height: 85px; }
+  .firstSection__boxes {
     display: flex;
-    align-items: center; }
-  .banner .button {
-    display: block;
-    padding: 15px 0px;
-    color: #fff;
-    border: 2px solid #fff;
-    text-transform: uppercase;
-    border-radius: 4px;
-    font-size: 14px;
-    background: none;
-    min-width: 120px;
-    transition: all 0.3s;
-    cursor: pointer; }
-    .banner .button:first-child {
-      margin-right: 15px; }
-    .banner .button:hover {
-      border-color: #23b7a4;
-      background-color: #23b7a4; }
+    align-items: center;
+    justify-content: space-around;
+    flex-flow: row wrap; }
+  .firstSection .box {
+    width: 240px;
+    flex: 1;
+    text-align: center; }
+    .firstSection .box__img {
+      width: 40px;
+      height: 40px;
+      display: inline-block;
+      margin-bottom: 45px; }
+      .firstSection .box__img img {
+        object-fit: contain; }
+    .firstSection .box__text {
+      font-size: 18px;
+      text-transform: uppercase; }
+      .firstSection .box__text.green {
+        color: #38c695; }
+      .firstSection .box__text.purpure {
+        color: #b27cf5; }
+      .firstSection .box__text.yellow {
+        color: #feb960; }
+
+.aboutus {
+  padding: 150px 15px; }
+  .aboutus .wrapper {
+    display: flex;
+    align-items: center;
+    max-width: 1140px;
+    margin: 0 auto; }
+  .aboutus__photo {
+    max-width: 555px;
+    max-height: 700px;
+    width: 100%;
+    height: 100%; }
+    .aboutus__photo img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover; }
+  .aboutus__body {
+    position: relative;
+    height: 490px;
+    max-width: 650px;
+    padding: 30px 80px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-left: -70px;
+    align-items: center;
+    background-color: white;
+    box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.15); }
+    .aboutus__body:after {
+      width: 100%;
+      height: 3px;
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      content: "";
+      background-image: linear-gradient(to left, #3a9a7c 0%, #3a9a7c 25%, #fc5f45 25%, #fc5f45 50%, #956dca 50%, #956dca 75%, #feb960 75%, #feb960 100%); }
+  .aboutus .sectionTitle {
+    margin-bottom: 55px; }
+  .aboutus__text {
+    font-size: 15px;
+    color: #929292;
+    line-height: 25px;
+    margin-bottom: 40px; }
+    .aboutus__text:last-child {
+      margin-bottom: 0; }
+  .aboutus__wrap-title {
+    width: 100%; }
+  @media (max-width: 1024px) {
+    .aboutus__body {
+      height: auto;
+      padding: 30px 50px; }
+    .aboutus .sectionTitle {
+      margin-bottom: 30px; } }
+  @media (max-width: 1024px) {
+    .aboutus {
+      padding: 30px 15px; }
+      .aboutus .wrapper {
+        flex-direction: column;
+        max-width: 400px; }
+      .aboutus__body {
+        width: auto;
+        margin-left: 0;
+        margin-top: 25px; }
+      .aboutus__text {
+        font-size: 14px; } }
