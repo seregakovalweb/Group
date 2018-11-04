@@ -1,4 +1,7 @@
 @import './base/_base.scss';
+@import './base/_colors.scss';
+@import './theeme/_buttons.scss';
+
 
 /*---LAYOUTS---*/
 @import './layout/_header.scss';
@@ -6,3 +9,5 @@
 /*---MODULES---*/
 @import './modules/_banner.scss';
 @import './modules/_about.scss';
+@import './modules/_work.scss';
+
