@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Welcome js</title>
+  <style>
+    .tabNav {
+      display: flex;
+      align-items: center;
+    }
+    .tabNav a {
+      padding: 10px 15px;
+      border-radius: 3px;
+      outline: none;
+      display: block;
+      text-decoration: none;
+      color: #9c9cd8;
+      border: 2px solid #9c9cd8;
+      margin-left: 15px;
+      font-size: 16px;
+    }
+
+    .tabNav a.active {
+      background: #9c9cd8;
+      color: #fff;
+    }
+    .tabContent {
+      padding: 10px 15px;
+    }
+    .itemTab {
+      display: none;
+    }
+    .itemTab.show {
+      display: block;
+    }
+
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="tabNav">
+      <a href="#" class="itemNav active">Item 1</a>
+      <a href="#" class="itemNav">Item 2</a>
+    </div>
+    <div class="tabContent">
+      <div class="itemTab show">
+        <h1>Content 1</h1>
+      </div>
+      <div class="itemTab">
+        <h1>Content 2</h1>
+      </div>
+    </div>
+  </div>
+  <script src='./script.js'></script>
+</body>
+</html>
