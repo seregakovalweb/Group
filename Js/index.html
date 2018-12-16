@@ -2,9 +2,10 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
+  <title>Welcome js</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Welcome js</title>
+  <link rel="stylesheet" href="./owl.carousel.min.css">
   <style>
     .tabNav {
       display: flex;
@@ -22,7 +23,7 @@
       font-size: 16px;
     }
 
-    .tabNav a.active {
+    .tabNav a.show {
       background: #9c9cd8;
       color: #fff;
     }
@@ -35,14 +36,25 @@
     .itemTab.show {
       display: block;
     }
-
+    .owl-dots button {
+      outline: none;
+    }
+    .owl-dots button span {
+      width: 20px;
+      height: 20px;
+      border-radius:  50%;
+      display: block;
+      background: red;
+      margin-right: 15px;
+    }
   </style>
 </head>
 <body>
   <div class="container">
     <div class="tabNav">
-      <a href="#" class="itemNav active">Item 1</a>
+      <a href="#" class="itemNav show">Item 1</a>
       <a href="#" class="itemNav">Item 2</a>
+      <a href="#" class="itemNav">Item 3</a>
     </div>
     <div class="tabContent">
       <div class="itemTab show">
@@ -51,8 +63,20 @@
       <div class="itemTab">
         <h1>Content 2</h1>
       </div>
+      <div class="itemTab">
+        <div class="owl-carousel owl-theme">
+          <div class="item">
+            <img src="https://cs4.pikabu.ru/post_img/big/2015/09/02/8/1441200743_1427616465.jpg" alt="">
+          </div>
+          <div class="item">
+          <img src="https://cs4.pikabu.ru/post_img/big/2015/09/02/8/1441200743_1427616465.jpg" alt="">
+          </div>
+        </div>
+      </div>
     </div>
   </div>
+  <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+  <script src="./owl.carousel.min.js"></script>
   <script src='./script.js'></script>
 </body>
 </html>
