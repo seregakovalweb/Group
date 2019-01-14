@@ -49,8 +49,12 @@
     }
   </style>
 </head>
+<script>
+  var a = 10;
+  var b = 20;
+</script>
 <body>
-  <div class="container">
+  <div class={`container ${isOpen ? 'active' : 'hide'}`}>
     <div class="tabNav">
       <a href="#" class="itemNav show">Item 1</a>
       <a href="#" class="itemNav">Item 2</a>
