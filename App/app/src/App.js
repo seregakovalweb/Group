@@ -2,10 +2,46 @@ import React, { Component } from 'react';
 import logo from './logo.svg';
 import './App.css';
 import Header from './components/Header';
+import UserList from './components/UserList';
 
+const links = [
+  {
+    title: 'Nav 1',
+    active: true,
+  },
+  {
+    title: 'Nav 2'
+  },
+];
+
+const userList = [
+  {
+    id: 1,
+    last_name: 'last_name',
+    first_name: 'first_name',
+    age: 123,
+    img: 'http://echovis.tt.com.pl/images/img_avatar.png',
+  },
+  {
+    id: 2,
+    last_name: 'last_name',
+    first_name: 'first_name',
+    age: 123,
+    img: 'http://echovis.tt.com.pl/images/img_avatar.png',
+  },
+];
 class App extends Component {
   constructor(props) {
     super(props);
+    this.state = {
+      isOpenList: false,
+    }
+  }
+
+  toggleUsers = () => {
+    this.setState({
+      isOpenList: !this.state.isOpenList,
+    });
   }
 
   handleClick = (name) => {
@@ -14,15 +50,10 @@ class App extends Component {
 
   render() {
     console.log('RENDER', this);
-    const links = [
-      {
-        title: 'Nav 1',
-        active: true,
-      },
-      {
-        title: 'Nav 2'
-      },
-    ];
+    const {
+      isOpenList,
+    } = this.state;
+    
     return (
       <div className="App">
         <Header
@@ -33,21 +64,20 @@ class App extends Component {
         <Header
           title="Header2"
         />
-        
-        {/* <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <p>
-            Edit <code>src/App.js</code> and save to reload.
-          </p>
-          <a
-            className="App-link"
-            href="https://reactjs.org"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Learn React
-          </a>
-        </header> */}
+        <button onClick={this.toggleUsers}>
+          Open
+        </button>
+        <div>
+          <button onClick={this.toggleUsers}>
+              Open
+          </button>
+        </div>
+        {
+          isOpenList &&
+          <UserList
+            userList={userList}
+          />
+        }
       </div>
     );
   }
