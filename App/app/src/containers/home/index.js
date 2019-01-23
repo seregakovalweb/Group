@@ -23,6 +23,7 @@ class Home extends Component {
       data: [],
       activeTab: 'firstTab',
       isErrorMessage: false,
+      activeUser: null,
     }
   }
 
@@ -42,11 +43,17 @@ class Home extends Component {
 
   }
 
+  updateUser = (user) => {
+    this.setState({
+      activeUser: user,
+    })
+  }
+
 
   render() {
     console.log('STATE', this.state);
     const {
-
+      data,
     } = this.state;
 
     return (
@@ -59,12 +66,13 @@ class Home extends Component {
         <div className="home__content">
           <div className="home__sidebar">
             <ActiveUser
-
+              user={this.state.activeUser}
             />
           </div>
           <div className='home__wrapUsers'>
             <UserList
-
+              data={data}
+              activeUser={this.updateUser}
             />
           </div>
         </div>

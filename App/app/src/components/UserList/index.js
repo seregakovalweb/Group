@@ -1,30 +1,38 @@
 import React, { Component } from 'react';
+import ItemUser from '../ItemUser';
 
 class UserList extends Component {
 
-  itemUser = (user) => {
-    const {
-      id,
-      img,
-      last_name,
-      first_name,
-    } = user;
-
-    return (
-      <div>
-        UserList
-      </div>
-    )
-  }
-
   render() {
     const {
-      userList,
+      data,
+      activeUser,
     } = this.props;
 
     return (
-      <div>
-        UserList
+      <div className='userList'>
+        <div className='usersList__head'>
+          <div className='avatar'>
+            <p>Avatar: </p>
+          </div>
+          <div>
+            <p>Name:</p>
+          </div>
+          <div>
+            <p>Age:</p>
+          </div>
+          <div>
+            <p>Phone:</p>
+          </div>
+        </div>
+        {
+          data.map(item => (
+            <ItemUser
+              updateActiveUser={activeUser}
+              {...item}
+            />
+          ))
+        }
         {/* {userList.map(item => this.itemUser(item))} */}
       </div>
     );
