@@ -11,14 +11,8 @@ class UserList extends Component {
     } = user;
 
     return (
-      <div key={id}>
-        <img
-          alt=''
-          src={img}
-          className='avatarUser'
-        />
-        <p>{last_name}</p>
-        <p>{first_name}</p>
+      <div>
+        UserList
       </div>
     )
   }
@@ -30,7 +24,8 @@ class UserList extends Component {
 
     return (
       <div>
-        {userList.map(item => this.itemUser(item))}
+        UserList
+        {/* {userList.map(item => this.itemUser(item))} */}
       </div>
     );
   }

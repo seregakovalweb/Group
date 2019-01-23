@@ -35,25 +35,18 @@ class App extends Component {
     super(props);
     this.state = {
       isOpenList: false,
+      activeTab: 'firstTab',
+      isErrorMessage: false,
     }
   }
 
-  toggleUsers = () => {
-    this.setState({
-      isOpenList: !this.state.isOpenList,
-    });
-  }
-
-  handleClick = (name) => {
-    console.log('123', name);
-  }
 
   render() {
     console.log('RENDER', this);
     const {
-      isOpenList,
+
     } = this.state;
-    
+
     return (
       <div className="App">
         <Header
@@ -61,23 +54,6 @@ class App extends Component {
           links={links}
           handleClick={this.handleClick}
         />
-        <Header
-          title="Header2"
-        />
-        <button onClick={this.toggleUsers}>
-          Open
-        </button>
-        <div>
-          <button onClick={this.toggleUsers}>
-              Open
-          </button>
-        </div>
-        {
-          isOpenList &&
-          <UserList
-            userList={userList}
-          />
-        }
       </div>
     );
   }
